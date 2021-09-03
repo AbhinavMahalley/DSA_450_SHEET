@@ -19,17 +19,29 @@ public class minimizeHeightIIArr {
          
          int ans=arr[n-1]-arr[0];// b - a
 
-         int minEle,maxEle;
-         for(int i=1;i<n;i++){
-             // check negative case
-             if(arr[i]>=k){
+//          int minEle,maxEle;
+//          for(int i=1;i<n;i++){
+//              // check negative case
+//              if(arr[i]>=k){
                  
-             maxEle=Math.max(arr[i-1]+k,arr[n-1]-k);// a+k 
-             minEle=Math.min(arr[0]+k,arr[i]-k);// b-k
+//              maxEle=Math.max(arr[i-1]+k,arr[n-1]-k);// a+k 
+//              minEle=Math.min(arr[0]+k,arr[i]-k);// b-k
              
-             ans=Math.min(ans,maxEle-minEle); // (b-k)-(a+k) 
-             }
-         }
+//              ans=Math.min(ans,maxEle-minEle); // (b-k)-(a+k) 
+//              }
+//          }
+       
+       int min,max;
+        int smallest=arr[0]+k;
+        int largest=arr[n-1]-k;
+        for(int i=0;i<n-1;i++){
+            if(arr[i]>=k){
+                min=Math.min(smallest,arr[i+1]-k);
+                max=Math.max(largest,arr[i]+k);
+                ans=Math.min(ans,max-min);
+            }
+        }
+       
          return ans;
     }
 }
