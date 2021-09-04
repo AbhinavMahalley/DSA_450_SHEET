@@ -31,7 +31,10 @@ public class minimumNumJumpsArr {
     // }
     // }
     // }
+//     if(dp[n-1]!=Integer.MAX_VALUE;
     // return dp[n-1];
+//    else
+//     return -1;
 
     // }
 
