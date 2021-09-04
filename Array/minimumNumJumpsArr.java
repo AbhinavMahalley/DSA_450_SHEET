@@ -36,7 +36,7 @@ public class minimumNumJumpsArr {
     // }
 
     public static int getMinJump(int arr[], int n) {
-        // gready
+        // gready O(N)
         if (n == 1) {
             return 0;
         }
