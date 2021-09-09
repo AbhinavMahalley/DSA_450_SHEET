@@ -17,7 +17,7 @@ public class countInversions {
     // public static long inversionCount(long arr[], long n)
     //  {
     //      // Your Code Here
-    //      // naive solution
+    //      // naive solution  O(n^2)
     //      long count =0;
     //      for(int i=0;i<n-1;i++){
     //          for(int j=i+1;j<n;j++){
@@ -33,12 +33,12 @@ public class countInversions {
     public static long inversionCount(long []arr, long n)
      {
          // Your Code Here
-         // mergesort approach solution
+         // mergesort approach solution   O(nlogn)
            Long countInv= mergeSort(arr,0, n-1);
             return countInv;
      }
 
-// static long countInv;//countInversions
+
 
 public static long mergeSort(long arr[],long lo,long hi){
     long countInv=0;
